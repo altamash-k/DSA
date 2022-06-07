@@ -27,7 +27,7 @@ int main()
 
         ans += d * pow;
         pow = pow * 10; 
-    }
+    }z
     
     cout << ans;
 }

@@ -1,7 +1,7 @@
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std; 
-main( ) 
+main() 
 {  
     int r, c;
     stack<int> st;

@@ -1,6 +1,3 @@
-st.push(num);
-    // while(st.size() > 0)
-    // {
-    //     cout << st.top();
-    //     st.pop();
-    // }
+case 5:
+        //     display();
+        //     break;

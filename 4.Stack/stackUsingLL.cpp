@@ -8,7 +8,7 @@ struct node {
     int data;
     struct node *next;
 };
-struct node *top = 0;
+struct node *top = NULL;
 
 void push(int x)
 {
@@ -23,7 +23,7 @@ void push(int x)
 int pop()
 {
     struct node *temp;
-    if(top == 0)
+    if(top == NULL)
         cout<<"Stack underflow\n";
     temp = top;
     top = top->next;
@@ -34,7 +34,7 @@ int pop()
 int peek()
 {
     struct node *temp;
-    if(top == 0)
+    if(top == NULL)
         cout<<"Stack underflow\n";
     temp = top;
     return temp->data;
@@ -43,7 +43,7 @@ int peek()
 int size()
 {
     struct node *temp;
-    if(top == 0)
+    if(top == NULL)
         cout<<"Stack underflow\n";
     temp = top;
     int count = 0;
@@ -58,7 +58,7 @@ int size()
 int display()
 {
     struct node *temp;
-    if(top == 0)
+    if(top == NULL)
         cout<<"Stack underflow\n";
     temp = top;
     cout << temp->data << "->";

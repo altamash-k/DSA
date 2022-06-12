@@ -48,18 +48,20 @@ int dequeue()
 
 int display()
 {
+    struct node* p;
+	p = head;
     if(head == NULL && tail == NULL)
     {
         cout << "Queueu Underflow";
     }
-    struct node *temp;
-    temp = head;
-    cout << temp->data << "->";
-    while (temp->next != NULL)
-    {
-        temp = temp->next;
-        cout<<temp->data <<"->";
-    }
+	else
+	{
+		while(p != NULL)
+		{
+			cout<<p->data<<"->";
+			p = p->next;
+		}
+	}
 }
 
 int top()

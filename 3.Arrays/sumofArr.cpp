@@ -39,9 +39,9 @@ int main() {
             sum += a2[j];
         }
 
-        int quot = sum / 10;
         int rem = sum % 10;
-
+        int quot = sum / 10;
+    
         ans[k] = rem;
         carry = quot;
         i--;

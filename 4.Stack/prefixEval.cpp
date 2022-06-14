@@ -4,10 +4,10 @@
 
 using namespace std;
 
-int postfixEval(string s)
+int prefixEval(string s)
 {
     stack<int> st;
-    for (int i = 0; i < s.length(); i++)
+    for (int i = s.length()-1; i >= 0; i--)
     {
         if(isalnum(s[i]))
         {
@@ -15,9 +15,9 @@ int postfixEval(string s)
         } 
         else
         {
-            int op2 = st.top();
-            st.pop();
             int op1 = st.top();
+            st.pop();
+            int op2 = st.top();
             st.pop();
             switch (s[i])
             {
@@ -47,9 +47,9 @@ int postfixEval(string s)
 int main()
 {
     string s;
-    cout << "Enter Postfix Expression: ";
+    cout << "Enter Prefix Expression: ";
     cin>>s;
-    cout << postfixEval(s);
+    cout << prefixEval(s);
 
     return 0;
 }

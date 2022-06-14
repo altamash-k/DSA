@@ -17,6 +17,7 @@ int main()
             }
             else {
                 cout << "false" << endl;
+                break;
             }
         }
         else if(ch == '}') {
@@ -25,6 +26,7 @@ int main()
             }
             else {
                 cout << "false" << endl;
+                break;
             }
         }
         else if(ch == ']') {
@@ -33,6 +35,7 @@ int main()
             }
             else {
                 cout << "false" << endl;
+                break;
             }
         }
     }

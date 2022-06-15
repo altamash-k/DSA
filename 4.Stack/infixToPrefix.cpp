@@ -1,5 +1,5 @@
-// Enter Infix Expression: (a-b/c)*(a-k/l)
-// abc/-akl/-*
+// Enter Infix Expression: (a-b/c)*(a/k-l)
+// *-a/bc-/akl
 
 #include<iostream>
 #include<stack>

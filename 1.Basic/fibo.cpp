@@ -7,7 +7,7 @@ int main()
     cout << "Enter value of n: ";
     cin >> n;
 
-    int a = 0, b = 1l;
+    int a = 0, b = 1;
     for(i = 0; i < n; i++)
     {
         int c;

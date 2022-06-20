@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.txt": "plaintext",
-        "iostream": "cpp",
-        "ostream": "cpp",
-        "new": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "Disabled"
-}

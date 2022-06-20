@@ -37,7 +37,7 @@ int main()
         v.push_back(data);
     }
 
-    cout << "Gretest Sum is: " << maxSubArray(v) << " ";
+    cout << "Greatest Sum is: " << maxSubArray(v) << " ";
 
     return 0;
 }

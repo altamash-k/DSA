@@ -86,7 +86,36 @@ void display_l2()
     }
 }
 
+struct node *sumOfNumbers()
+{
+    struct node *l1 = head1;
+    struct node *l2 = head2;
+    struct node *dummy =  (struct node *)malloc(sizeof(struct node));;
+    struct node *temp = dummy;
+    int carry = 0;
+    while(l1 != NULL || l2 != NULL || carry)
+    {
+        int sum = 0;
+        if(l1 != NULL)
+        {
+            sum += l1->data;
+            l1 = l1->next;
+        }
+        if(l2 != NULL)
+        {
+            sum += l2->data;
+            l2 = l2->next;
+        }
+        sum += carry;
+        carry = sum / 10;
+        struct node *newnode = (struct node *)malloc(sizeof(struct node));
+        newnode->data = sum % 10;
+        temp -> next = newnode;
+        temp = temp->next; 
+    }
 
+    return dummy->next;
+}
 
 int main()
 {

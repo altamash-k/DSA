@@ -108,6 +108,26 @@ void detect_loop()
         }
     }
     cout << "Loop not detected" << endl;
+
+}
+
+int startingPoint()
+{
+	struct node *slow, *fast;
+    slow = fast = head;
+    while(fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+        if(slow == fast) {
+			while(slow != fast)
+			{
+				fast = head;
+				fast = fast->next;
+				slow = slow->next;
+			}
+			return slow->data;
+		}
+    }
 }
 
 void print_list()
@@ -134,35 +154,41 @@ void print_list()
 	}
 }
 
+
+
 int main()
 {
 	int ch;
 	while(1)
 	{
 		
-	cout<<"\nChoose the operations:\n1:Insert at Beginning\n2:Insert at Middle\n3:Insert at End\n4:Print the List\n5: Create Loop\n6: Detect Loop"<<endl;
-	cin>>ch;
-	switch(ch){
-		case 1:
-			insert_begin();
-			break;
-		case 2:
-			insert_middle();
-			break;
-		case 3:
-			insert_end();
-			break;
-			
-		case 4:
-			print_list();
-			break;
-		case 5:
-			create_loop();
-			break;
-		case 6:
-			detect_loop();
-			break;
-		
-	}		
+		cout<<"\nChoose the operations:\n1:Insert at Beginning\n2:Insert at Middle\n3:Insert at End\n4:Print the List\n5: Create Loop\n6: Detect Loop\n7: Starting Point\n"<<endl;
+		cin>>ch;
+		switch(ch)
+		{
+			case 1:
+				insert_begin();
+				break;
+			case 2:
+				insert_middle();
+				break;
+			case 3:
+				insert_end();
+				break;
+			case 4:
+				print_list();
+				break;
+			case 5:
+				create_loop();
+				break;
+			case 6:
+				detect_loop();
+				break;
+			case 7:
+				cout << "Loop is at element: " << startingPoint();
+				break;
+			default:
+				break;
+		}		
 	}	
 }

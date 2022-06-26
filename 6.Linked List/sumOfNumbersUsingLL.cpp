@@ -86,11 +86,11 @@ void display_l2()
     }
 }
 
-struct node *sumOfNumbers()
+void sumOfNumbers()
 {
     struct node *l1 = head1;
     struct node *l2 = head2;
-    struct node *dummy =  (struct node *)malloc(sizeof(struct node));;
+    struct node *dummy =  (struct node *)malloc(sizeof(struct node));
     struct node *temp = dummy;
     int carry = 0;
     while(l1 != NULL || l2 != NULL || carry)
@@ -114,7 +114,12 @@ struct node *sumOfNumbers()
         temp = temp->next; 
     }
 
-    return dummy->next;
+    struct node *ptr = dummy->next;
+    while(ptr != NULL)
+    {
+        cout << ptr->data << "->";
+        ptr = ptr->next;
+    }
 }
 
 int main()

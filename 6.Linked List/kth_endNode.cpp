@@ -88,7 +88,6 @@ void kthNode_end()
     }
     while (pTemp->next != NULL)
     {
-        /* code */
         pTemp = pTemp->next;
         kthNode = kthNode -> next;
     }

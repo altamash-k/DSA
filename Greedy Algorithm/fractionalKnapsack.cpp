@@ -15,6 +15,7 @@ bool compare(Item a, Item b)
 
 double fractionalKnapsack(int W, Item arr[], int n)
 {
+    //irst sort the arr in descening order of value/weight ratio
     sort(arr, arr+n, compare);
 
     int currWeight = 0;
@@ -22,15 +23,15 @@ double fractionalKnapsack(int W, Item arr[], int n)
 
     for(int i = 0; i < n; i++)
     {
-        if(currWeight + arr[i].weight <= W)
+        if(currWeight + arr[i].weight <= W) // if value is less than the Weight we can occupy
         {
-            currWeight += arr[i].weight;
-            finalValue += arr[i].value;
-        }
+            currWeight += arr[i].weight; // put values weight to currWeight
+            finalValue += arr[i].value; // update value 
+        } // once the weight becomes greater than weight occupy
         else
         {
-            int remain = W - currWeight;
-            finalValue += (arr[i].value / (double) arr[i].weight) * (double) remain;
+            int remain = W - currWeight; // get the remaining weight
+            finalValue += (arr[i].value / (double) arr[i].weight) * (double) remain; // then update value to = value/weight * remain
             break;
         }
     }

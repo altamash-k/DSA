@@ -29,6 +29,8 @@ vector<int> topView(struct node *root)
         node* curr = it.first;
         int line = it.second;
 
+        // here the only diff is we do not check whether it is present
+        // in map or not, we simply replace the old data with new one
         mp[line] = curr->data;
         
         if(curr->left != NULL)

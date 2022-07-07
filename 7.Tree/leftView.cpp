@@ -13,7 +13,7 @@ struct node {
     }
 };
 
-void rightView(struct node *root)
+void leftView(struct node *root)
 {
     if(root == NULL)
         return;
@@ -52,7 +52,7 @@ int main()
     root->right->right = new node(7);
 
     cout << "Left View: ";
-    rightView(root);
+    leftView(root);
 
     return 0;
 }

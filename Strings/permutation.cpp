@@ -65,7 +65,7 @@ int main()
     cout << "Enter String 2: ";
     cin >> s2;
 
-    if(checkPallindrome(s1, s2))
+    if(checkPermutation(s1, s2))
         cout << "Second String contains pallindrome of First String";
     else
         cout << "Second String does contains pallindrome of First String";

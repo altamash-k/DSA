@@ -47,7 +47,7 @@ int main()
     // For Sliding Window
     int j = 0;
 
-    for(int i = 0; i<n-k; i++)
+    for(int i = 0; i<n-k+1; i++)
     {
         if(j<i)
         {

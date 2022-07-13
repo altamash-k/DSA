@@ -25,9 +25,9 @@ int eval(vector<string>& tokens)
             continue; // continue from loop
         }
 
-        int num1 = st.top(); // take first nun
+        int num2 = st.top(); // take first nun
         st.pop();
-        int num2 = st.top(); // take second num
+        int num1 = st.top(); // take second num
         st.pop();
 
         int res = 0;
@@ -50,7 +50,7 @@ int eval(vector<string>& tokens)
 
 int main()
 {
-    vector<string> tokens = { "2","1","+","3","*"};
+    vector<string> tokens = {"4","13","5","/","+"};
  
     int res = eval(tokens);
     cout << res << endl;

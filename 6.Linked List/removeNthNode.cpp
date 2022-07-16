@@ -1,8 +1,8 @@
 /*
-    Given head of linked-list, reorder list alternating outside in
-    Ex. head = [1,2,3,4] -> [1,4,2,3], head = [1,2,3,4,5] -> [1,5,2,4,3]
+    Given head of a linked list, remove nth node from end of list
+    Ex. head = [1,2,3,4,5], n = 2 -> [1,2,3,5]
 
-    Find middle node, split in half, reverse 2nd half of list, merge
+    Create 2 pointers "n" apart, iterate until end, will be at nth
 
     Time: O(n)
     Space: O(1)

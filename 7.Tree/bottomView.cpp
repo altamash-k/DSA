@@ -13,7 +13,7 @@ struct node {
     }
 };
 
-vector<int> topView(struct node *root)
+vector<int> bottomView(struct node *root)
 {
     vector<int> ans;
     if(root == NULL)
@@ -57,8 +57,8 @@ int main()
     root->right->left = new node(6);
     root->right->right = new node(7);
 
-    cout << "Top View: ";
-    vector<int> res = topView(root);
+    cout << "Bottom View: ";
+    vector<int> res = bottomView(root);
     for(int i = 0; i < res.size(); i++)
         cout << res[i] << " ";
 

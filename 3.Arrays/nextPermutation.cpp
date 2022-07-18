@@ -10,7 +10,7 @@ using namespace std;
 void nextPermutation(vector<int>& v)
 {
     int n = v.size(), k, l;
-    for(k = n-2; k >= 0; k--)
+    for(k = n-2; k >= 0; k--) // starting from end, find first num that is lesser than its next idx
     {
         if(v[k] < v[k+1])
             break;
@@ -19,13 +19,13 @@ void nextPermutation(vector<int>& v)
         reverse(v.begin(), v.end());
     else
     {
-        for(l = n-1; l > k; l--)
+        for(l = n-1; l > k; l--) // get l from backwards, which is just greater than val of k
         {
             if(v[l] > v[k])
                 break;
         }
-        swap(v[l], v[k]);
-        reverse(v.begin() + k + 1, v.end());
+        swap(v[l], v[k]); // swap l and k nums
+        reverse(v.begin() + k + 1, v.end()); // reverse from k+1 pos
     }
 }
 

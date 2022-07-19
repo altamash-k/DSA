@@ -8,7 +8,6 @@ struct node {
 };
 
 class Solution {
-    node *prev = NULL;
     public:
         void flatten(node *root)
         {

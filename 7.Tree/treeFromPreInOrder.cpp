@@ -45,13 +45,13 @@ node *buildTree(int preorder[], int inorder[], int start, int end)
     return newnode;
 }
 
-void inorderPrint(node *root)
+void preorderPrint(node *root)
 {
     if(root == NULL)
         return;
-    inorderPrint(root->left);
     cout << root->data << " ";
-    inorderPrint(root->right);
+    preorderPrint(root->left);
+    preorderPrint(root->right);
 }
 
 int main()
@@ -74,5 +74,5 @@ int main()
         cin>>inorder[i];
 
     node *root = buildTree(preorder, inorder, 0, n_in-1);
-    inorderPrint(root);
+    preorderPrint(root);
 }

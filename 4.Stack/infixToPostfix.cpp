@@ -1,7 +1,7 @@
 // Enter Infix Expression: (a-b/c)*(a/k-l)
 // abc/-ak/l-*
 
-#include<iostream>
+#include<bits/stdc++.hm>
 #include<stack>
 using namespace std;
 

@@ -1,4 +1,4 @@
-#include <bits/stdc++.hm>
+#include <bits/stdc++.h>
 using namespace std;
 
 int merge(int arr[], int lb, int mid, int ub)

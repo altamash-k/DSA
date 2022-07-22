@@ -2,7 +2,7 @@
 // input: career
 // output: ca
 
-#include<bits/stdc++.hm>
+#include<bits/stdc++.h>
 #include<bits/stdc++.h>
 using namespace std;
 

@@ -1,4 +1,4 @@
-#include<bits/stdc++.hm>
+#include<bits/stdc++.h>
 #include<bits/stdc++.h>
 #define n 5
 

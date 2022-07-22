@@ -2,7 +2,6 @@
 // input:  2 4 1 6 3 5
 // output: 4 6 6 -1 5 -1
 
-#include<bits/stdc++.hm>
 #include <bits/stdc++.h>
 using namespace std;
 

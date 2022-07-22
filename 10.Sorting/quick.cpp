@@ -1,4 +1,4 @@
-#include <bits/stdc++.hm>
+#include <bits/stdc++.h>
 using namespace std;
 
 int partition(int arr[], int lb, int ub)

@@ -7,12 +7,12 @@ struct node {
     struct node * left, * right;
 };
 
-void inorder(node *root, int &k, int &res)
+void inorderSmallest(node *root, int &k, int &res)
 {
     if(root == NULL)
         return;
     
-    inorder(root->left, k, res);
+    inorderSmallest(root->left, k, res);
     k--;
     if(k == 0)
     {
@@ -20,13 +20,36 @@ void inorder(node *root, int &k, int &res)
         return;
     }
 
-    inorder(root->right, k, res);
+    inorderSmallest(root->right, k, res);
+}
+
+void inorderLargest(node *root, int &k, int &res)
+{
+    if(root == NULL)
+        return;
+    
+    inorderLargest(root->right, k, res);
+    k--;
+    if(k == 0)
+    {
+        res = root->data;
+        return;
+    }
+
+    inorderLargest(root->left, k, res);
 }
 
 int kthSmallest(node *root, int k)
 {
     int res = 0;
-    inorder(root, k, res);
+    inorderSmallest(root, k, res);
+    return res;
+}
+
+int kthLargest(node *root, int k)
+{
+    int res = 0;
+    inorderLargest(root, k, res);
     return res;
 }
 
@@ -55,6 +78,8 @@ int main() {
     cin >> k;
 
     cout << "Kth smallest element is: "  << kthSmallest(root, k);
+    cout << endl;
+    cout << "Kth largest element is: "  << kthLargest(root, k);
 
     return 0;
 }

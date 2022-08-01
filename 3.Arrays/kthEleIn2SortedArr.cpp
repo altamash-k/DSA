@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int kth(int arr1[], int arr2[], int n1, int n2, int k)
+void kth(int arr1[], int arr2[], int n1, int n2, int k)
 {
     vector<int>ans;
     int temp1 = 0;

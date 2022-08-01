@@ -1,4 +1,4 @@
-// Additive Persistence:
+// multiplicative Persistence:
 // num = 77
 // 7 * 7 = 49
 // 4 * 9 = 36
@@ -10,7 +10,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int additivePersistence(int num)
+int multiplicativePersistence(int num)
 {
     int b = 1;
     while(num > 0)
@@ -27,12 +27,12 @@ int main()
     cout << "Enter num: ";
     cin >> num;
 
-    // cout << additivePersistence(num);
+    // cout << multiplicativePersistence(num);
 
     int count = 0;
     while(num >= 10)
     {
-        num = additivePersistence(num);
+        num = multiplicativePersistence(num);
         count++;
     }
 

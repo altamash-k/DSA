@@ -31,7 +31,7 @@ int romanToDecimal(string &str)
 
 int main()
 {
-    string str = "IVX";
+    string str = "XIV";
     cout << "Integer form of Roman Numeral is " << romanToDecimal(str) << endl;
  
     return 0;

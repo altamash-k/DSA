@@ -22,7 +22,7 @@ bool isRotated(string s1, string s2)\
 int main()
 {
     string str1 = "amazon";
-    string str2 = "azanam";
+    string str2 = "onamaz";
  
     isRotated(str1, str2) ? cout << "Yes": cout << "No";
     return 0;

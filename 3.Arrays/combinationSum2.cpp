@@ -30,8 +30,8 @@ vector<vector<int>> combinationSum2(vector<int>& candidates, int target)
 
 int main()
 {
-    vector<int> v{10,1,2,7,6,1,5};
-    vector < vector < int >> comb = combinationSum2(v, 8);
+    vector<int> v{1, 2, 3, 7, 5};
+    vector < vector < int >> comb = combinationSum2(v, 12);
     cout << "[ ";
     for (int i = 0; i < comb.size(); i++) {
         cout << "[ ";
